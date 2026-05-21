@@ -1,0 +1,69 @@
+site_name: HUMANEXA
+site_description: "The Sincerity Protocol for Global Social Impact"
+site_author: "HUMANEXA Team"
+repo_url: https://github.com/gokulm-dev-official/HUMANEXA---AI-Powered-Social-Impact-Platform-Application
+
+theme:
+  name: material
+  palette:
+    # Default to dark mode for premium aesthetic
+    - scheme: slate
+      primary: cyan
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Toggle to light mode
+    - scheme: default
+      primary: cyan
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - toc:
+      permalink: true
+
+nav:
+  - Introduction:
+      - Overview: index.md
+      - Architecture: architecture.md
+  - Core Concepts:
+      - Sincerity Protocol: core-concepts/sincerity_protocol.md
+      - Certificates & Tiers: core-concepts/certificates.md
+      - AI Verification: core-concepts/ai_verification.md
+  - Getting Started:
+      - Quickstart: getting-started/quickstart.md
+  - User Guides:
+      - Donors: guides/donors.md
+      - Helpers: guides/helpers.md
+  - API Reference:
+      - Backend API: api/backend_api.md
+      - AI Service API: api/ai_service_api.md
